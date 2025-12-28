@@ -1,0 +1,46 @@
+.search {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    /* Optional: adjust to your design */
+}
+
+.search__input-box {
+    position: relative;
+    padding-top: 20px;
+}
+
+.search__input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    font-size: 16px;
+}
+
+.search__label {
+    position: absolute;
+    top: 32px;
+    left: 12px;
+    color: #999;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.search__input:focus+.search__label,
+.search__input:not(:placeholder-shown)+.search__label {
+    top: 0;
+    font-size: 12px;
+    color: #2196f3;
+}
+
+.search__result-box {
+    position: absolute;
+    top: 100%;
+    /* Sits directly below the input box */
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    /* We handle overflow and animation inside suggestion.css */
+}
